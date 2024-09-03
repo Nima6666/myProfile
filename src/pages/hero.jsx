@@ -47,8 +47,8 @@ export default function Hero() {
           )}
         </div>
         <div className="flex-1 text-white flex flex-col justify-center items-center">
-          <div className="p-4">
-            <div className="text-4xl md:text-5xl lg:text-6xl font-semibold">
+          <div className="">
+            <div className="text-3xl p-2 text-wrap w-10/12 sm:w-auto md:text-5xl lg:text-6xl font-semibold">
               {splitChar(intro).map((char, index) => {
                 return (
                   <motion.span
@@ -71,7 +71,7 @@ export default function Hero() {
               })}
             </div>
 
-            <div className="min-h-14 text-3xl">
+            <div className="sm:min-h-14 min-h-24 text-xl md:text-3xl w-10/12 sm:w-auto p-2">
               {introComplete && (
                 <motion.div
                   initial={{ y: 70, opacity: 0 }}
@@ -84,7 +84,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="md:flex-[0.7] flex-1 h-full overflow-hidden mt-8 lg:mt-0">
+        <div className="md:flex-[0.7] flex-1 h-full overflow-hidden mt-20 lg:mt-0">
           <div className="relative h-full w-full">
             <img
               src={me}
