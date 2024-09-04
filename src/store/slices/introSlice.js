@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const introSlice = createSlice({
   name: "introSlice",
-  initialState: { introComplete: false },
+  initialState: { introComplete: true },
   reducers: {
     setIntroComplete: (state) => {
       state.introComplete = true;

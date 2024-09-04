@@ -16,10 +16,10 @@ export default function Hero() {
   );
 
   return (
-    <div className="h-screen w-screen overflow-hidden flex justify-center items-center bg-transparent">
+    <div className="h-screen w-full overflow-hidden flex justify-center items-center bg-transparent ">
       <motion.div
         id="home"
-        className="relative flex justify-center flex-col-reverse lg:flex-row items-center w-full container mx-auto sm:h-[90%] h-[100%] rounded-none  sm:rounded-lg overflow-hidden backdrop-blur-sm shadow-md shadow-[#3d3d3d]"
+        className="relative flex justify-center flex-col-reverse lg:flex-row items-center w-full container mx-auto sm:h-[90%] h-[100%] rounded-none  sm:rounded-lg overflow-hidden backdrop-blur-sm shadow-md shadow-[#3d3d3d] border border-[#5f5f5f]"
         variants={initialPageAnim}
         initial="scaled"
         animate="visible"
@@ -92,7 +92,7 @@ export default function Hero() {
               className="h-full w-full object-cover rounded-full lg:rounded-none"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity rounded-full lg:rounded-none">
-              AI is Awesome
+              AI is Awesome. Made Using Flux-dev
             </div>
           </div>
         </div>

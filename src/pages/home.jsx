@@ -1,10 +1,34 @@
-import Hero from "./hero";
-import Projects from "./projects";
+import React, { Suspense } from "react";
+import { useSelector } from "react-redux";
+
+const Hero = React.lazy(() => import("./hero"));
+
+const Projects = React.lazy(() => import("./projects"));
 
 export default function Home() {
+  const introComplete = useSelector(
+    (state) => state.introReducer.introComplete
+  );
   return (
     <>
-      <Hero />
+      <Suspense
+        fallback={
+          <div className="w-screen h-screen text-white text-6xl font-semibold flex justify-center items-center">
+            Loading...
+          </div>
+        }
+      >
+        <Hero />
+      </Suspense>
+      <Suspense
+        fallback={
+          <div className="w-screen h-screen text-white text-6xl font-semibold flex justify-center items-center">
+            Loading...
+          </div>
+        }
+      >
+        {introComplete && <Projects />}
+      </Suspense>
     </>
   );
 }

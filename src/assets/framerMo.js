@@ -1,3 +1,5 @@
+import { color } from "framer-motion";
+
 export const logoMo = {
   visible: {
     y: 0,
@@ -70,5 +72,76 @@ export const iconAnim = {
   hidden: {
     opacity: 0,
     y: -100,
+  },
+};
+
+export const buttonAnim = {
+  hover: {
+    letterSpacing: "3px",
+    color: "black",
+    transition: { duration: 0.3 },
+  },
+};
+
+export const blurRevealAnim = {
+  visible: {
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      type: "tween",
+      damping: 12,
+      stiffness: 100,
+      duration: 0.3,
+    },
+    opacity: 1,
+  },
+  hidden: {
+    y: 100,
+    filter: "blur(10px)",
+    // transition: {
+    //   type: "tween",
+    //   damping: 12,
+    //   stiffness: 100,
+    //   duration: 0.2,
+    // },
+    opacity: 0,
+  },
+};
+
+export const lineAnimRigtht = {
+  visible: (custom) => ({
+    opacity: 1,
+    x: 0,
+    // y: 0,
+    transition: {
+      type: "spring",
+      damping: 10,
+      stiffness: 200,
+      delay: custom * 0.02,
+    },
+    blur: 0,
+  }),
+  hidden: {
+    opacity: 0,
+    x: -100,
+    // y: 100,
+  },
+};
+
+export const lineAnimLeft = {
+  visible: (custom) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      damping: 1000,
+      stiffness: 900,
+      delay: custom * 0.09,
+    },
+    blur: 0,
+  }),
+  hidden: {
+    opacity: 0,
+    x: -50, // Move text to the left
   },
 };

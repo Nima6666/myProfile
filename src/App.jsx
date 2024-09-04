@@ -75,7 +75,7 @@ function App() {
         },
         move: {
           enable: true,
-          speed: 0.1,
+          speed: 0.2,
           direction: "none",
           random: true,
           straight: false,
@@ -133,18 +133,18 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div
-        id="particles-js"
-        className="absolute top-0 left-0 w-full h-full z-[-1] bg-transparent"
-      />
-      <Router>
-        <Suspense fallback={<div className="w-full h-full">Loading...</div>}>
+      <div className="relative">
+        <div
+          id="particles-js"
+          className="fixed top-0 left-0 w-full h-full z-[-1] bg-transparent overflow-hidden"
+        />
+        <Router>
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
-        </Suspense>
-      </Router>
+        </Router>
+      </div>
     </Provider>
   );
 }
