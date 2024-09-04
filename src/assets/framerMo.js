@@ -78,7 +78,6 @@ export const iconAnim = {
 export const buttonAnim = {
   hover: {
     letterSpacing: "3px",
-    color: "black",
     transition: { duration: 0.3 },
   },
 };

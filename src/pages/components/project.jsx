@@ -129,7 +129,7 @@ export default function Project({ proj, ind }) {
             <motion.a
               href={proj.url}
               target="_blank"
-              className="w-full h-full flex items-center justify-center text-white"
+              className="w-full h-full flex items-center justify-center transition-colors duration-300 text-white hover:text-black"
               variants={buttonAnim}
             >
               <span className="mr-2">Live</span>
@@ -152,7 +152,7 @@ export default function Project({ proj, ind }) {
             <motion.a
               href={proj.code ? proj.code : ""}
               target={proj.code ? "_blank" : ""}
-              className={`w-full h-full flex items-center justify-center text-black ${
+              className={`w-full h-full flex items-center justify-center transition-colors duration-300 text-black hover:text-white ${
                 !proj.code && "pointer-events-none"
               }`}
               variants={{
@@ -179,9 +179,12 @@ export default function Project({ proj, ind }) {
       <div className="relative overflow-hidden flex-1 h-[300px] md:h-full">
         <img src={proj.image} alt="" className="w-full h-full object-cover" />
         <motion.div className="absolute top-0 left-0 w-full h-full opacity-0 duration-300 transition-opacity hover:opacity-100 bg-[#000000a7] flex justify-center items-center">
-          {proj.tools.map((tool) => {
+          {proj.tools.map((tool, index) => {
             return (
-              <motion.div className="p-4 rounded-full border border-[#474747] w-[80px] h-[80px] relative hover:cursor-pointer m-2 bg-black overflow-hidden">
+              <motion.div
+                className="p-4 rounded-full border border-[#474747] w-[80px] h-[80px] relative hover:cursor-pointer m-2 bg-black overflow-hidden"
+                key={index}
+              >
                 <img
                   src={
                     tool === "react"

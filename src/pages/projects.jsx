@@ -24,15 +24,16 @@ export default function Projects() {
                 variants={lineAnimRigtht}
                 custom={index}
                 initial="hidden"
-                animate="visible"
                 className="text-right"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
                 {eachLi}
               </motion.span>
             );
           })}
         </div>
-        <span className="mx-4 text-3xl">MY PROJECTS</span>
+        <span className="mx-4 text-3xl">DEVELOPMENTS</span>
         {splitChar(line).map((eachLi, index) => {
           return (
             <motion.span
@@ -40,7 +41,8 @@ export default function Projects() {
               variants={lineAnimRigtht}
               custom={index}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               {eachLi}
             </motion.span>

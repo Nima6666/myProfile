@@ -27,22 +27,26 @@ export default function Hero() {
         <div className="absolute top-5 left-5 flex z-40">
           {introComplete && (
             <>
-              <motion.div
+              <motion.a
+                href="https://github.com/nima6666"
+                target="_blank"
                 variants={iconAnim}
                 initial="hidden"
                 animate="visible"
                 custom={1}
               >
                 <FaGithub color="white" size={50} className="mr-4" />
-              </motion.div>
-              <motion.div
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/prakash-lama-020614295/"
+                target="_blank"
                 variants={iconAnim}
                 initial="hidden"
                 animate="visible"
                 custom={2}
               >
                 <FaLinkedin color="white" size={50} />
-              </motion.div>
+              </motion.a>
             </>
           )}
         </div>

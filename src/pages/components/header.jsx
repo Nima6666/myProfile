@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logoImg from "/logo/logo-no-background.svg";
+
 import { motion } from "framer-motion";
 import { logoMo } from "../../assets/framerMo";
 import { useEffect, useState } from "react";
@@ -28,7 +29,7 @@ export default function Header() {
       className="fixed top-0 w-screen z-50 backdrop-blur-md bg-[#000000a7]"
       initial={{ y: -100, filter: "blur(10px)" }}
       animate={{
-        y: scrolled ? 0 : -100,
+        y: scrolled ? 0 : -200,
         filter: scrolled ? "blur(0px)" : "blur(10px)",
       }}
       transition={{ duration: 0.2 }}
@@ -41,7 +42,7 @@ export default function Header() {
           variants={logoMo}
           initial="hidden"
           animate="visible"
-          className="h-[120px] p-4"
+          className="h-[80px] p-4"
         >
           <img src={logoImg} alt="Company Logo" className="h-full w-fit p-2" />
         </motion.div>
