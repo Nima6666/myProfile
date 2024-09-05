@@ -144,3 +144,26 @@ export const lineAnimLeft = {
     x: -50, // Move text to the left
   },
 };
+
+export const cardAnim = {
+  hidden: {
+    x: 100,
+    opacity: 0,
+    transition: {
+      type: "spring",
+      damping: 7,
+      stiffness: 250,
+      duration: 0.05,
+    },
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 7,
+      stiffness: 250,
+      duration: 0.05,
+    },
+  },
+};

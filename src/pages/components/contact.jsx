@@ -1,5 +1,9 @@
 import { useRef, useState } from "react";
-import { blurRevealAnim, lineAnimRigtht } from "../../assets/framerMo";
+import {
+  blurRevealAnim,
+  cardAnim,
+  lineAnimRigtht,
+} from "../../assets/framerMo";
 import splitChar from "../../assets/splitChar";
 import { motion } from "framer-motion";
 
@@ -28,7 +32,7 @@ export default function Contact() {
         ${center.y / 100},
         ${-center.x / 100},
         0,
-        ${Math.log(distance) * 3}deg
+        ${Math.log(distance) * 1.6}deg
       )
     `;
 
@@ -43,12 +47,16 @@ export default function Contact() {
     `;
   }
   return (
-    <div className="h-screen w-full text-white relative overflow-hidden ">
+    <div className="min-h-screen w-full text-white relative overflow-hidden pb-10 flex justify-center items-center">
       <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse justify-center items-center h-full w-full perspective z-10">
         <motion.div
           id="card"
           className="h-fit md:h-[400px] md:w-[700px] w-[80%] p-8 md:p-16 flex flex-col md:flex-row justify-between relative rounded-2xl overflow-hidden pb-14 z-50 bg-[#00000077]"
           ref={cardRef}
+          variants={cardAnim}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           onMouseEnter={() =>
             setBounds(cardRef.current.getBoundingClientRect())
           }
@@ -90,6 +98,7 @@ export default function Contact() {
           variants={blurRevealAnim}
           whileInView="visible"
           initial="hidden"
+          viewport={{ once: true }}
         >
           <span className="text-3xl md:text-5xl lg:text-6xl mainText">
             Let's Connect
@@ -104,9 +113,9 @@ export default function Contact() {
         
       </div> */}
       <div className="absolute w-full h-full top-0 left-0 z-[-1] bg-black flex justify-around">
-        <div className="h-[600px] w-[600px] rounded-full bg-[#80ac08] blur-[100px] absolute -right-8 z-[10] scale-150 -bottom-1/2 -translate-y-1/2 animatePulse"></div>
+        <div className="h-[60%] w-[30%] rounded-full bg-[#80ac08] blur-[100px] absolute -right-8 z-[10] scale-150 -bottom-1/2 -translate-y-1/2 animatePulse"></div>
         <div className="h-[300px] w-[300px] rounded-full bg-[#3a4dff] blur-[100px] absolute -right-5 z-[-2] scale-150 bottom-1/2"></div>
-        <div className="h-[100px] w-[100px] rounded-full bg-[#ff5000] blur-[100px] absolute right-28 z-[10] scale-150 top-10"></div>
+        <div className="h-[100px] w-[100px] rounded-full bg-[#ff5000] blur-[100px] absolute right-28 z-[10] scale-150 top-[10%]"></div>
         <div className="h-[400px] w-[400px] rounded-full bg-[#614f06] blur-[100px] absolute -right-8 z-[-1] scale-150 -bottom-1/2 translate-y-1/2"></div>
         <div className="h-full border-r border-white z-[-1] opacity-20"></div>
         <div className="h-full border-r border-white z-[-1] opacity-20"></div>
