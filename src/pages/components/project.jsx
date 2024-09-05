@@ -144,7 +144,7 @@ export default function Project({ proj, ind }) {
             ></motion.div>
           </motion.div>
           <motion.div
-            className={`mainText w-[100px] h-[40px] text-lg relative rounded-md m-3 border border-[#5f5f5f] overflow-hidden bg-yellow-400 ${
+            className={`mainText w-[100px] h-[40px] text-lg relative rounded-md m-3 border border-[#5f5f5f] overflow-hidden bg-yellow-400 text-black hover:text-white ${
               proj.code ? "" : "cursor-not-allowed"
             }`}
             whileHover="hover"
@@ -152,13 +152,12 @@ export default function Project({ proj, ind }) {
             <motion.a
               href={proj.code ? proj.code : ""}
               target={proj.code ? "_blank" : ""}
-              className={`w-full h-full flex items-center justify-center transition-colors duration-300 text-black hover:text-white ${
+              className={`w-full h-full flex items-center justify-center transition-colors duration-300  ${
                 !proj.code && "pointer-events-none"
               }`}
               variants={{
                 hover: {
                   letterSpacing: "3px",
-                  color: "white",
                   transition: { duration: 0.3 },
                 },
               }}

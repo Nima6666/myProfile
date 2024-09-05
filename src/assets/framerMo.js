@@ -116,7 +116,7 @@ export const lineAnimRigtht = {
       type: "spring",
       damping: 10,
       stiffness: 200,
-      delay: custom * 0.02,
+      delay: custom * 0.035,
     },
     blur: 0,
   }),
