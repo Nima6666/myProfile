@@ -5,6 +5,8 @@ import Home from "./pages/home";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import Footer from "./pages/components/footer";
+import Projects from "./pages/projects";
+import Developments from "./pages/developments";
 
 const Header = React.lazy(() => import("./pages/components/header"));
 
@@ -143,6 +145,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/development" element={<Developments />} />
           </Routes>
           <Footer />
         </Router>

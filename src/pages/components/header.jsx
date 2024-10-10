@@ -85,7 +85,7 @@ export default function Header() {
                   <Link to="/" className="p-2 mt-20">
                     HOME
                   </Link>
-                  <Link to="/" className="p-2">
+                  <Link to="/development" className="p-2">
                     DEVELOPMENT
                   </Link>
                   <Link to="/" className="p-2">
@@ -100,7 +100,7 @@ export default function Header() {
                 HOME
               </Link>
               <Link
-                to="/"
+                to="/development"
                 className="mx-16 p-2 flex items-center justify-center"
               >
                 DEVELOPMENT

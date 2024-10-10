@@ -1,90 +1,3 @@
-// import { motion } from "framer-motion";
-// import { FaCode, FaEye } from "react-icons/fa";
-// import { blurRevealAnim, buttonAnim } from "../../assets/framerMo";
-
-// export default function Project({ proj, ind }) {
-//   const even = ind % 2;
-
-//   return (
-//     <motion.div
-//       className={`flex justify-center backdrop-blur-md w-full border border-[#5f5f5f] my-10 p-4 rounded-lg ${
-//         even ? "flex-row" : "flex-row-reverse"
-//       }`}
-//       key={ind}
-//       variants={blurRevealAnim}
-//       whileInView="visible"
-//       initial="hidden"
-//       viewport={{ once: true }}
-//     >
-//       <div className="flex-1 p-4  max-h-fit flex  flex-col justify-between">
-//         <div className="">
-//           <h3
-//             className={`mainText text-3xl font-semibold h-full ${
-//               even && "text-right"
-//             }`}
-//           >
-//             {proj.name}
-//           </h3>
-//           <p className="text-xl">{proj.description}</p>
-//         </div>
-//         <div
-//           className={`${
-//             even ? "justify-end" : "justify-start"
-//           } flex items-center`}
-//         >
-//           <motion.div
-//             className="mainText w-[100px] h-[40px] text-lg relative rounded-md m-3 border border-[#5f5f5f] overflow-hidden "
-//             whileHover="hover"
-//           >
-//             <motion.button
-//               className="w-full h-full flex items-center justify-center text-white"
-//               variants={buttonAnim}
-//             >
-//               <span className="mr-2">Live</span>
-//               <FaEye />
-//             </motion.button>
-//             <motion.div
-//               className="absolute h-[10px] w-[10px] rounded-full top-[250%] left-1/2 z-[-1] bg-[#d1d1d1]"
-//               variants={{
-//                 hover: { top: 1 / 2, scale: 13 },
-//               }}
-//               transition={{ duration: 0.4 }}
-//             ></motion.div>
-//           </motion.div>
-//           <motion.div
-//             className="mainText w-[100px] h-[40px] text-lg relative rounded-md m-3 border border-[#5f5f5f] overflow-hidden bg-yellow-400"
-//             whileHover="hover"
-//           >
-//             <motion.button
-//               className="w-full h-full flex items-center justify-center text-black "
-//               variants={{
-//                 hover: {
-//                   letterSpacing: "3px",
-//                   color: "white",
-//                   transition: { duration: 0.3 },
-//                 },
-//               }}
-//             >
-//               <span className="mr-2 z-10">Code</span>
-//               <FaCode className="z-10" />
-//             </motion.button>
-//             <motion.div
-//               className="absolute h-[10px] w-[10px] rounded-full top-[-250%] left-1/2 z-[0] bg-[#465e04]"
-//               variants={{
-//                 hover: { top: 1 / 2, scale: 14 },
-//               }}
-//               transition={{ duration: 0.4 }}
-//             ></motion.div>
-//           </motion.div>
-//         </div>
-//       </div>
-//       <div className="relative overflow-visible flex-[0.8] h-full">
-//         <img src={proj.image} alt="" className="w-full h-full object-cover " />
-//       </div>
-//     </motion.div>
-//   );
-// }
-
 import { motion } from "framer-motion";
 import { FaCode, FaEye } from "react-icons/fa";
 import { blurRevealAnim, buttonAnim } from "../../assets/framerMo";
@@ -136,7 +49,7 @@ export default function Project({ proj, ind }) {
               <FaEye />
             </motion.a>
             <motion.div
-              className="absolute h-[10px] w-[10px] rounded-full top-[100%] left-1/2 transform -translate-x-1/2 z-[-1] bg-[#d1d1d1]"
+              className="absolute h-[10px] w-[10px] rounded-full top-[150%] left-1/2 transform -translate-x-1/2 z-[-1] bg-[#d1d1d1]"
               variants={{
                 hover: { top: 0, scale: 13 },
               }}

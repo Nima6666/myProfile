@@ -7,6 +7,7 @@ import cvBuilderImg from "../assets/projectImages/cvBuilder.png";
 import memoryImg from "../assets/projectImages/memory.png";
 import todoImg from "../assets/projectImages/todo.png";
 import weatherImg from "../assets/projectImages/weather.png";
+import infinityImg from "../assets/projectImages/infinity.png";
 
 export const projects = [
   {
@@ -24,6 +25,15 @@ export const projects = [
     tools: ["mongo", "react", "node"],
     image: annapurna,
     url: "https://annapurnamediequip.com",
+  },
+  {
+    name: "Infinity Airlines",
+    description:
+      "Full-stack application with JWT authentication and Authorization, with Stripe payment.",
+    tools: ["mongo", "react", "node"],
+    image: infinityImg,
+    url: "https://assignmentserver-0wk9.onrender.com",
+    code: "https://github.com/Nima6666/assignmentServer",
   },
   {
     name: "Blog",
@@ -71,8 +81,8 @@ export const projects = [
       "Uses Geolocation API for current location, Fetches weather information from Weather API, Includes async loading screen.",
     tools: ["vanillaJS"],
     image: weatherImg,
-    url: "https://github.com/nima6666/Weather",
-    code: "https://nima6666.github.io/Weather",
+    url: "https://nima6666.github.io/Weather",
+    code: "https://github.com/nima6666/Weather",
   },
   {
     name: "Todos",
@@ -80,8 +90,8 @@ export const projects = [
       "Vanilla JavaScript; Set, delete, mark tasks complete; Includes priority options.",
     tools: ["vanillaJS"],
     image: todoImg,
-    url: "https://github.com/nima6666/todo-list",
-    code: "https://nima6666.github.io/todo-list",
+    url: "https://nima6666.github.io/todo-list",
+    code: "https://github.com/nima6666/todo-list",
   },
   {
     name: "Memory Game",

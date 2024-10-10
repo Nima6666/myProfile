@@ -86,18 +86,6 @@ html {
   }
 }
 
-/* @keyframes cardAnimation {
-  0%,
-  100% {
-    transform: rotate3d(1, 1, 0, 15deg);
-  }
-  25% {
-    transform: rotate3d(0, 1, 0, 15deg);
-  }
-  50% {
-    transform: rotate3d(1, 1, 0, -15deg);
-  }
-  75% {
-    transform: rotate3d(0, 1, 0, -15deg);
-  }
-} */
+.overlay {
+  background: radial-gradient(#000000d1, #00000077);
+}
