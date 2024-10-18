@@ -25,7 +25,7 @@ function App() {
     particlesJS("particles-js", {
       particles: {
         number: {
-          value: 199,
+          value:44,
           density: {
             enable: true,
             value_area: 773.51100518494565,
