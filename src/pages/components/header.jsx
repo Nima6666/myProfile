@@ -88,9 +88,9 @@ export default function Header() {
                   <Link to="/development" className="p-2">
                     DEVELOPMENT
                   </Link>
-                  <Link to="/" className="p-2">
+                  {/* <Link to="/" className="p-2">
                     ABOUT
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </>
@@ -105,9 +105,9 @@ export default function Header() {
               >
                 DEVELOPMENT
               </Link>
-              <Link to="/" className="p-2">
+              {/* <Link to="/" className="p-2">
                 ABOUT
-              </Link>
+              </Link> */}
             </>
           )}
         </div>
