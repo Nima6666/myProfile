@@ -89,3 +89,17 @@ html {
 .overlay {
   background: radial-gradient(#000000d1, #00000077);
 }
+
+.project-card {
+  backdrop-filter: blur(10px);
+  background: linear-gradient(145deg, #ffffff12, #ffffff05);
+  box-shadow: 0 12px 45px -28px #000000;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: #9a9a9a;
+  box-shadow: 0 16px 50px -28px #000000;
+}
+

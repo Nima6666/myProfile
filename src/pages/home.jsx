@@ -2,6 +2,7 @@ import React, { Suspense, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
+import Experience from "./experience";
 
 const Hero = React.lazy(() => import("./hero"));
 
@@ -29,6 +30,15 @@ export default function Home() {
         }
       >
         <Hero />
+      </Suspense>
+      <Suspense
+        fallback={
+          <div className="w-screen h-screen text-white text-6xl font-semibold flex justify-center items-center">
+            Loading...
+          </div>
+        }
+      >
+        {introComplete && <Experience />}
       </Suspense>
       <Suspense
         fallback={

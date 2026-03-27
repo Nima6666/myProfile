@@ -11,7 +11,7 @@ export default function Project({ proj, ind }) {
 
   return (
     <motion.div
-      className={`flex flex-col  justify-center backdrop-blur-md w-full border border-[#5f5f5f] my-10 p-4 rounded-lg ${
+      className={`project-card flex flex-col justify-center w-full border border-[#5f5f5f] my-8 p-4 md:p-6 rounded-2xl ${
         even ? " md:flex-row flex-row" : " md:flex-row-reverse flex-row-reverse"
       }`}
       variants={blurRevealAnim}
@@ -28,7 +28,9 @@ export default function Project({ proj, ind }) {
           >
             {proj.name}
           </h3>
-          <p className="text-base md:text-xl">{proj.description}</p>
+          <p className="text-base md:text-xl text-[#dddddd] leading-relaxed">
+            {proj.description}
+          </p>
         </div>
         <div
           className={`flex ${
@@ -36,7 +38,7 @@ export default function Project({ proj, ind }) {
           } items-center mt-4`}
         >
           <motion.div
-            className="mainText w-[100px] h-[40px] text-lg relative rounded-md m-3 border border-[#5f5f5f] overflow-hidden"
+            className="mainText w-[110px] h-[42px] text-lg relative rounded-md m-3 border border-[#777777] overflow-hidden"
             whileHover="hover"
           >
             <motion.a
@@ -49,7 +51,7 @@ export default function Project({ proj, ind }) {
               <FaEye />
             </motion.a>
             <motion.div
-              className="absolute h-[10px] w-[10px] rounded-full top-[150%] left-1/2 transform -translate-x-1/2 z-[-1] bg-[#d1d1d1]"
+              className="absolute h-[10px] w-[10px] rounded-full top-[150%] left-1/2 transform -translate-x-1/2 z-[-1] bg-[#f1f1f1]"
               variants={{
                 hover: { top: 0, scale: 13 },
               }}
@@ -57,7 +59,7 @@ export default function Project({ proj, ind }) {
             ></motion.div>
           </motion.div>
           <motion.div
-            className={`mainText w-[100px] h-[40px] text-lg relative rounded-md m-3 border border-[#5f5f5f] overflow-hidden bg-yellow-400 text-black hover:text-white ${
+            className={`mainText w-[110px] h-[42px] text-lg relative rounded-md m-3 border border-[#5f5f5f] overflow-hidden bg-[#f0c54a] text-black hover:text-white ${
               proj.code ? "" : "cursor-not-allowed"
             }`}
             whileHover="hover"
@@ -88,8 +90,12 @@ export default function Project({ proj, ind }) {
           </motion.div>
         </div>
       </div>
-      <div className="relative overflow-hidden flex-1 h-[300px] md:h-full">
-        <img src={proj.image} alt="" className="w-full h-full object-cover" />
+      <div className="relative overflow-hidden flex-1 h-[280px] md:h-full rounded-xl">
+        <img
+          src={proj.image}
+          alt={proj.name}
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+        />
         <motion.div className="absolute top-0 left-0 w-full h-full opacity-0 duration-300 transition-opacity hover:opacity-100 bg-[#000000a7] flex justify-center items-center">
           {proj.tools.map((tool, index) => {
             return (

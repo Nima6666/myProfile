@@ -82,7 +82,8 @@ export default function Hero() {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  I am a Full-Stack Developer.
+                  I am a Lead Full Stack Developer focused on scalable web
+                  applications.
                 </motion.div>
               )}
             </div>

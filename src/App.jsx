@@ -5,8 +5,6 @@ import Home from "./pages/home";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import Footer from "./pages/components/footer";
-import Projects from "./pages/projects";
-import Developments from "./pages/developments";
 
 const Header = React.lazy(() => import("./pages/components/header"));
 
@@ -136,7 +134,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div className="relative">
+      <div className="relative px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
         <div
           id="particles-js"
           className="fixed top-0 left-0 w-full h-full z-[-1] bg-transparent overflow-hidden"
@@ -145,7 +143,6 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/development" element={<Developments />} />
           </Routes>
           <Footer />
         </Router>

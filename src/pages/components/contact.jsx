@@ -47,7 +47,7 @@ export default function Contact() {
     `;
   }
   return (
-    <div className="min-h-screen w-full text-white relative overflow-hidden pb-10 flex justify-center items-center">
+    <div className="min-h-screen w-screen text-white relative overflow-hidden pb-10 flex justify-center items-center left-1/2 -translate-x-1/2">
       <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse justify-center items-center h-full w-full perspective z-10">
         <motion.div
           id="card"
@@ -69,7 +69,7 @@ export default function Contact() {
           <div className="h-fit">
             <h2 className="text-3xl md:text-4xl mainText">Prakash Lama</h2>
             <div className="text-sm mt-4 md:mt-8 text-[#b8b8b8]">
-              <p>FullStack Developer</p>
+              <p>Lead Full Stack Developer</p>
               <p>Bhaktapur, Nepal</p>
             </div>
           </div>
@@ -85,6 +85,10 @@ export default function Contact() {
             <div className="flex flex-col mt-4">
               <span className="text-sm text-[#b8b8b8]">Github</span>
               <span>Nima6666</span>
+            </div>
+            <div className="flex flex-col mt-4">
+              <span className="text-sm text-[#b8b8b8]">Website</span>
+              <span>https://prakashlama1.com.np</span>
             </div>
           </div>
           <div className="absolute w-[80%] left-1/2 -translate-x-1/2 bottom-8 md:bottom-10 border-b border-[#dadada]"></div>
@@ -104,8 +108,8 @@ export default function Contact() {
             Let's Connect
           </span>
           <p className="mt-4 md:mt-8 container sm:mx-auto text-wrap">
-            Please get in touch if you think our work can be mutually
-            beneficial!
+            Please get in touch if you are building product or service-based
+            applications and want to collaborate.
           </p>
         </motion.div>
       </div>
